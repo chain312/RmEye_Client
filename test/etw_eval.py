@@ -38,7 +38,7 @@ def log_extracting(x):
     try:
         data={}
         regex = re.compile('RULE: (\S+)\)')
-        data["Action"] = regex.findall(x["Task Name"])[0].lower()
+        data["Action"] = regex.findall(x["Task Name"])[0]
         data["Data"]=x
         print(data["Action"])
         # sent_server(data)
@@ -59,6 +59,8 @@ def my_capture():
     # stop capture
     # capture.stop()
 
+def updata_sysmon_xml():
 
+    pass
 if __name__ == '__main__':
     my_capture()
